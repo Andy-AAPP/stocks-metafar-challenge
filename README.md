@@ -17,16 +17,22 @@ Este proyecto consiste en una aplicación para visualizar stocks utilizando la A
 Para instalar las dependencias del proyecto, sigue estos pasos:
 
 1. Clona el repositorio:
+
    ```bash
    git clone https://github.com/Andy-AAPP/stocks-metafar-challenge.git
 
+   ```
+
 2. En el directorio del proyecto, ejecutar el comando:
-  ```bash
-  npm install
+
+````bash
+ npm install
+ ```
 
 3. Ejecutar el proyecto con el comando:
-  ```bash
-  npm run dev
+```bash
+npm run dev
+````
 
 ## Uso
 
