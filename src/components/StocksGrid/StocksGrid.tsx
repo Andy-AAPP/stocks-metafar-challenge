@@ -6,12 +6,6 @@ import { fetchStocks, setSelectedStock } from "../../store/stocks/stocks.slice";
 import { Link } from "react-router-dom";
 import { AutocompleteSelect } from "../AutocompleteSelect/AutocompleteSelect";
 
-// Al ingresar al sitio,
-// nos debe de mostrar una tabla que liste de manera paginada todas las acciones disponibles con las siguientes
-// columnas: Símbolo, Nombre, Moneda y Tipo.
-// El símbolo debe de ser un link que permita ver el detalle de dicha acción.
-//  Dicha tabla debe de contar con un buscado por nombre de acción y otro por símbolo
-
 interface DataRow {
   symbol: string;
   name: string;
@@ -25,9 +19,6 @@ const columns: GridColDef[] = [
     field: "symbol",
     headerName: "Símbolo",
     width: 150,
-    // renderCell: (params) => (
-    //   <Link to={`/graph?symbol=${params.value}`}>{params.formattedValue}</Link>
-    // ),
     renderCell: (params) => {
       // eslint-disable-next-line react-hooks/rules-of-hooks
       const dispatch = useAppDispatch();
@@ -63,12 +54,6 @@ export const StocksGrid: React.FC = () => {
   useEffect(() => {
     dispatch(fetchStocks(searchValue));
   }, [dispatch, searchValue]);
-
-  // const autocompleteList = stocks.map((item) => ({
-  //   label: `${item.symbol} - ${item.name}`,
-  // }));
-
-  // console.log("autocompleteList", autocompleteList);
 
   return (
     <Box

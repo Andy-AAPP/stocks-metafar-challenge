@@ -1,50 +1,35 @@
-# React + TypeScript + Vite
+# stocks-metafar-challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Challenge de visualización de stocks usando la API [Twelve Data](https://twelvedata.com/).
 
-Currently, two official plugins are available:
+## Tabla de Contenidos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Descripción](#descripción)
+- [Instalación](#instalación)
+- [Uso](#uso)
 
-## Expanding the ESLint configuration
+## Descripción
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Este proyecto consiste en una aplicación para visualizar stocks utilizando la API de Twelve Data. Permite a los usuarios ver información en tiempo real sobre diversas acciones y realizar análisis básicos.
 
-- Configure the top-level `parserOptions` property like this:
+## Instalación
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Para instalar las dependencias del proyecto, sigue estos pasos:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/Andy-AAPP/stocks-metafar-challenge.git
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. En el directorio del proyecto, ejecutar el comando:
+  ```bash
+  npm install
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. Ejecutar el proyecto con el comando:
+  ```bash
+  npm run dev
+
+## Uso
+
+1. Para poder consumir data de la API [Twelve Data](https://twelvedata.com/) , crearse una cuenta en la misma y utilizar el Token otorgado por la plataforma.
+
+2. El token debe pegarse en el archivo 'stocks.slice.ts' en la variable `API_KEY`.
